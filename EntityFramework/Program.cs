@@ -11,17 +11,20 @@ namespace EntityFramework {
             // Add more students, test some queries with where clauses
 
             var context = new AppDbContext();
-            var coursesArr = new Course[] {
-                new Course("Intro to Linux", "Sutit Eroom", 24, "Cyber Security"),
-                new Course("Boom", "Jerritte Couture", 13, "Rocket Science"),
-                new Course("Game Theory", "Sutit Eroom", 45, "Esports"),
-                new Course("English Literature 101", "Giddeons Leon", 24, "Literature"),
-                new Course("Esports Business", "Sutit Eroom", 24, "Esports"),
-                new Course("Kali Linux", "Sutit Eroom", 24, "Cyber Security"),
-            };
-            foreach (var course in coursesArr) {
-                context.Courses.Add(course);
-            }
+
+            
+
+            //var coursesArr = new Course[] {
+            //    new Course("Intro to Linux", "Sutit Eroom", 24, "Cyber Security"),
+            //    new Course("Boom", "Jerritte Couture", 13, "Rocket Science"),
+            //    new Course("Game Theory", "Sutit Eroom", 45, "Esports"),
+            //    new Course("English Literature 101", "Giddeons Leon", 24, "Literature"),
+            //    new Course("Esports Business", "Sutit Eroom", 24, "Esports"),
+            //    new Course("Kali Linux", "Sutit Eroom", 24, "Cyber Security"),
+            //};
+            //foreach (var course in coursesArr) {
+            //    context.Courses.Add(course);
+            //}
 
             //var studentsArr = new Student[] {
             //    new Student("J.", "Bird", 1100, 2.8, true, "Esports"),
@@ -44,7 +47,7 @@ namespace EntityFramework {
             //    new Student("S.", "Rogers", 1000, 4.6, false, "Socialogy")
             //    );
 
-            context.SaveChanges();
+            //context.SaveChanges();
             //var major1 = new Major();
             //major1.Id = 0;
             //major1.Description = "Nursing";

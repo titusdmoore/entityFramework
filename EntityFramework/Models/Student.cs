@@ -44,5 +44,7 @@ namespace EntityFramework.Models {
             return $"{this.firstName} {this.lastName} GPA[{this.GPA}] SAT[{this.SAT}] {Environment.NewLine}" +
                 $"Fulltime: {this.isFullTime} and is Majoring in {major}";
         }
+
+       
     }
 }
