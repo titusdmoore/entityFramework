@@ -45,6 +45,17 @@ namespace EntityFramework.Models {
                 $"Fulltime: {this.isFullTime} and is Majoring in {major}";
         }
 
-       
+        public string GetStudentInfo() {
+            var context = new AppDbContext();
+            var major = context.Majors.SingleOrDefault(m => m.Id == this.MajorId).Description;
+            var courseArr = context.Courses.Where(m => m.MajorId == this.MajorId).ToArray();
+            string courseReturn = "";
+            foreach (var course in courseArr) {
+                courseReturn = courseReturn + $" | {course.Name}";
+            }
+            return $"Student {firstName} {lastName}{Environment.NewLine}" +
+                $"Majoring in {major}{Environment.NewLine}" +
+                $"Which has the Courses:{courseReturn}";
+        }
     }
 }

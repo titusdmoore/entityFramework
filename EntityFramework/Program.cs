@@ -12,6 +12,9 @@ namespace EntityFramework {
 
             var context = new AppDbContext();
 
+            var student = context.Students.Find(3);
+            var returned = student.GetStudentInfo();
+            Console.WriteLine(returned);
             
 
             //var coursesArr = new Course[] {
