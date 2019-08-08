@@ -25,5 +25,6 @@ namespace EntityFramework.Models {
             //Will be needed for every class which represents the table you want to access
         public DbSet<Student> Students { get; set; }
         public DbSet<Major> Majors { get; set; }
+        public DbSet<Course> Courses { get; set; }
     }
 }

@@ -11,17 +11,29 @@ namespace EntityFramework {
             // Add more students, test some queries with where clauses
 
             var context = new AppDbContext();
-            var studentsArr = new Student[] {
-                new Student("J.", "Bird", 1100, 2.8, true, "Esports"),
-                new Student("P.", "Star", 650, 1.7, false, "Public Speaking"),
-                new Student("J.", "Neutron", 2400, 5.0, true, "Theater"),
-                new Student("T.", "Turner", 1300, 2.5, true, "Golf Science"),
-                new Student("S.", "Rogers", 1000, 4.6, false, "Socialogy")
+            var coursesArr = new Course[] {
+                new Course("Intro to Linux", "Sutit Eroom", 24, "Cyber Security"),
+                new Course("Boom", "Jerritte Couture", 13, "Rocket Science"),
+                new Course("Game Theory", "Sutit Eroom", 45, "Esports"),
+                new Course("English Literature 101", "Giddeons Leon", 24, "Literature"),
+                new Course("Esports Business", "Sutit Eroom", 24, "Esports"),
+                new Course("Kali Linux", "Sutit Eroom", 24, "Cyber Security"),
             };
-
-            foreach (var student in studentsArr) {
-                context.Students.Add(student);
+            foreach (var course in coursesArr) {
+                context.Courses.Add(course);
             }
+
+            //var studentsArr = new Student[] {
+            //    new Student("J.", "Bird", 1100, 2.8, true, "Esports"),
+            //    new Student("P.", "Star", 650, 1.7, false, "Public Speaking"),
+            //    new Student("J.", "Neutron", 2400, 5.0, true, "Theater"),
+            //    new Student("T.", "Turner", 1300, 2.5, true, "Golf Science"),
+            //    new Student("S.", "Rogers", 1000, 4.6, false, "Socialogy")
+            //};
+
+            //foreach (var student in studentsArr) {
+            //    context.Students.Add(student);
+            //}
 
             // Not Working code till line 23
             //List<Student> students = new List<Student>().AddRange(
